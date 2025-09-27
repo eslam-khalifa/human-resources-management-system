@@ -1,0 +1,26 @@
+﻿@using Demo.Presentation.ViewModels.RoleViewModels
+@model RoleVM
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-action="Edit">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="col-md-6">
+        <label class="form-label fw-bold" asp-for="Id">Id</label>
+        <input readonly class="form-control" asp-for="@Model.Id" />
+        <span asp-validation-for="Id" class="text-danger"></span>
+    </div>
+    
+    <div class="col-md-6">
+        <label class="form-label fw-bold" asp-for="RoleName">First Name</label>
+        <input class="form-control" asp-for="@Model.RoleName" />
+        <span asp-validation-for="RoleName" class="text-danger"></span>
+    </div>
+
+
+    <input type="submit" value="Save" class="btn btn-warning" />
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>

@@ -1,0 +1,15 @@
+D:\github_repos\DemoMvcSolution\Demo.BusinessLogic\bin\Debug\net8.0\Demo.BusinessLogic.deps.json
+D:\github_repos\DemoMvcSolution\Demo.BusinessLogic\bin\Debug\net8.0\Demo.BusinessLogic.dll
+D:\github_repos\DemoMvcSolution\Demo.BusinessLogic\bin\Debug\net8.0\Demo.BusinessLogic.pdb
+D:\github_repos\DemoMvcSolution\Demo.BusinessLogic\bin\Debug\net8.0\Demo.DataAccess.dll
+D:\github_repos\DemoMvcSolution\Demo.BusinessLogic\bin\Debug\net8.0\Demo.DataAccess.pdb
+D:\github_repos\DemoMvcSolution\Demo.BusinessLogic\obj\Debug\net8.0\Demo.BusinessLogic.csproj.AssemblyReference.cache
+D:\github_repos\DemoMvcSolution\Demo.BusinessLogic\obj\Debug\net8.0\Demo.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\github_repos\DemoMvcSolution\Demo.BusinessLogic\obj\Debug\net8.0\Demo.BusinessLogic.AssemblyInfoInputs.cache
+D:\github_repos\DemoMvcSolution\Demo.BusinessLogic\obj\Debug\net8.0\Demo.BusinessLogic.AssemblyInfo.cs
+D:\github_repos\DemoMvcSolution\Demo.BusinessLogic\obj\Debug\net8.0\Demo.BusinessLogic.csproj.CoreCompileInputs.cache
+D:\github_repos\DemoMvcSolution\Demo.BusinessLogic\obj\Debug\net8.0\Demo.Bus.99DA84BC.Up2Date
+D:\github_repos\DemoMvcSolution\Demo.BusinessLogic\obj\Debug\net8.0\Demo.BusinessLogic.dll
+D:\github_repos\DemoMvcSolution\Demo.BusinessLogic\obj\Debug\net8.0\refint\Demo.BusinessLogic.dll
+D:\github_repos\DemoMvcSolution\Demo.BusinessLogic\obj\Debug\net8.0\Demo.BusinessLogic.pdb
+D:\github_repos\DemoMvcSolution\Demo.BusinessLogic\obj\Debug\net8.0\ref\Demo.BusinessLogic.dll

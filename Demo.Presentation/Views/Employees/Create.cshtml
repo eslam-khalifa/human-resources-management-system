@@ -1,0 +1,23 @@
+﻿@using Demo.BusinessLogic.DataTransferObjects.EmployeeDTOs
+@using Demo.DataAccess.Entities.EmployeEntities
+@using Demo.DataAccess.Entities.Shared.Enums
+@using Demo.Presentation.ViewModels.EmployeeViewModels
+@model EmployeeVM
+
+<h2>Create Employee</h2>
+
+<form asp-action="Create" method="post" class="mt-3" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    @{
+        await Html.RenderPartialAsync("PartialViews/_CreateEditEmployeePartialView", Model);
+    }
+
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
+
+@section ValidationScripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

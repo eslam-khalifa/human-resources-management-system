@@ -1,0 +1,21 @@
+﻿@using Demo.Presentation.ViewModels.RoleViewModels
+@model RoleVM
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create New Role</h1>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="RoleName" class="form-label text-muted">Role Name</label>
+        <input asp-for="RoleName" class="form-control" />
+        <span asp-validation-for="RoleName" class="text-danger"></span>
+    </div>
+
+    <input type="submit" value="Create" class="btn btn-primary" />
+    <a class="btn btn-outline-dark" asp-action="Index">Back to List</a>
+</form>

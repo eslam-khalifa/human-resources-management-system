@@ -1,0 +1,128 @@
+﻿@using Demo.BusinessLogic.DataTransferObjects.DepartmentDTOs
+@using Demo.BusinessLogic.Services.Interfaces
+@using Demo.DataAccess.Entities.EmployeEntities
+@using Demo.DataAccess.Entities.Shared.Enums
+@using Demo.Presentation.ViewModels.EmployeeViewModels
+@inject IDepartmentService departmentService
+@model EmployeeVM
+@{
+    var Departments = new SelectList(departmentService.GetAll(), "Id", nameof(DepartmentDTO.Name));
+}
+
+<!-- Name -->
+<div class="col-md-6">
+    <label asp-for="Name" class="form-label"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+
+<!-- Image -->
+<div class="col-md-6">
+    <label asp-for="Image" class="form-label"></label>
+
+    @if (!string.IsNullOrEmpty(Model.ImageName))
+    {
+        <!-- Show current image if editing -->
+        <div class="mb-2">
+            <img src="~/Files/Images/@Model.ImageName"
+                 alt="Employee Image"
+                 style="max-width:200px; display:block; margin-bottom:10px;" />
+        </div>
+    }
+
+    <!-- File input (browser won’t prefill for security reasons) -->
+    <input asp-for="Image" class="form-control" type="file" accept="image/*" />
+    <span asp-validation-for="Image" class="text-danger"></span>
+</div>
+
+<!-- Age -->
+<div class="col-md-6">
+    <label asp-for="Age" class="form-label"></label>
+    <input asp-for="Age" class="form-control" />
+    <span asp-validation-for="Age" class="text-danger"></span>
+</div>
+
+<!-- Address -->
+<div class="col-12">
+    <label asp-for="Address" class="form-label"></label>
+    <input asp-for="Address" class="form-control" />
+    <span asp-validation-for="Address" class="text-danger"></span>
+</div>
+
+<!-- Is Active -->
+<div class="col-md-6 form-check mt-4">
+    <input asp-for="IsActive" class="form-check-input" />
+    <label asp-for="IsActive" class="form-check-label"></label>
+</div>
+
+<!-- Salary -->
+<div class="col-md-6">
+    <label asp-for="Salary" class="form-label"></label>
+    <input asp-for="Salary" class="form-control" />
+    <span asp-validation-for="Salary" class="text-danger"></span>
+</div>
+
+<!-- Email -->
+<div class="col-md-6">
+    <label asp-for="Email" class="form-label"></label>
+    <input asp-for="Email" class="form-control" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+</div>
+
+<!-- Phone -->
+<div class="col-md-6">
+    <label asp-for="PhoneNumber" class="form-label"></label>
+    <input asp-for="PhoneNumber" class="form-control" />
+    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+</div>
+
+<!-- Hiring Date -->
+<div class="col-md-6">
+    <label asp-for="HiringDate" class="form-label"></label>
+    <input asp-for="HiringDate" class="form-control" type="date" />
+    <span asp-validation-for="HiringDate" class="text-danger"></span>
+</div>
+
+<!-- Gender -->
+<div class="col-md-6">
+    <label asp-for="Gender" class="form-label"></label>
+    <div>
+        @foreach (var genderOption in Enum.GetValues(typeof(Demo.DataAccess.Entities.Shared.Enums.Gender)))
+        {
+            var genderValue = (Gender)genderOption;
+            <input type="radio" asp-for="Gender" value="@genderValue" checked="@(Model?.Gender == genderValue ? "checked" : null)" />
+            <label>@genderValue</label>
+        }
+    </div>
+    <span asp-validation-for="Gender" class="text-danger"></span>
+</div>
+
+<!-- Department -->
+<div class="mb-3">
+    <label asp-for="DepartmentId" class="form-label"></label>
+    <select asp-for="DepartmentId" class="form-select" asp-items="Departments">
+        <option value="@null">-- Choose Department --</option>
+    </select>
+    <span asp-validation-for="DepartmentId" class="text-danger"></span>
+</div>
+
+<!-- Employee Type -->
+<div class="mb-3">
+    <label asp-for="EmployeeType" class="form-label"></label>
+    <select asp-for="EmployeeType" class="form-select" asp-items="@(new SelectList(Enum.GetValues(typeof(EmployeeType))))">
+        <option value="">-- Select Type --</option>
+    </select>
+    <span asp-validation-for="EmployeeType" class="text-danger"></span>
+</div>
+
+<!-- CreatedBy (readonly for audit) -->
+<div class="col-md-6">
+    <label asp-for="CreatedBy" class="form-label"></label>
+    <input asp-for="CreatedBy" class="form-control" readonly="@(Model.IsEditMode)" />
+</div>
+
+<!-- LastModifiedBy -->
+<div class="col-md-6">
+    <label asp-for="LastModifiedBy" class="form-label"></label>
+    <input asp-for="LastModifiedBy" class="form-control" />
+</div>

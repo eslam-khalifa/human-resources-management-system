@@ -1,0 +1,21 @@
+﻿@using Demo.Presentation.ViewModels.RoleViewModels
+@model RoleVM
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Model.RoleName Details</h1>
+
+<div class="col-md-6">
+    <label class="form-label fw-bold" asp-for="Id">Id</label>
+    <input readonly class="form-control" asp-for="@Model.Id" />
+</div>
+
+<div class="col-md-6">
+    <label class="form-label fw-bold" asp-for="RoleName">Role Name</label>
+    <input readonly class="form-control" asp-for="@Model.RoleName" />
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-success">Edit</a>
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

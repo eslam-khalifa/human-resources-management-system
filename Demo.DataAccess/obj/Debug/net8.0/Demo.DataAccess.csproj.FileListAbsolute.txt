@@ -1,0 +1,12 @@
+D:\github_repos\DemoMvcSolution\Demo.DataAccess\bin\Debug\net8.0\Demo.DataAccess.deps.json
+D:\github_repos\DemoMvcSolution\Demo.DataAccess\bin\Debug\net8.0\Demo.DataAccess.dll
+D:\github_repos\DemoMvcSolution\Demo.DataAccess\bin\Debug\net8.0\Demo.DataAccess.pdb
+D:\github_repos\DemoMvcSolution\Demo.DataAccess\obj\Debug\net8.0\Demo.DataAccess.csproj.AssemblyReference.cache
+D:\github_repos\DemoMvcSolution\Demo.DataAccess\obj\Debug\net8.0\Demo.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\github_repos\DemoMvcSolution\Demo.DataAccess\obj\Debug\net8.0\Demo.DataAccess.AssemblyInfoInputs.cache
+D:\github_repos\DemoMvcSolution\Demo.DataAccess\obj\Debug\net8.0\Demo.DataAccess.AssemblyInfo.cs
+D:\github_repos\DemoMvcSolution\Demo.DataAccess\obj\Debug\net8.0\Demo.DataAccess.csproj.CoreCompileInputs.cache
+D:\github_repos\DemoMvcSolution\Demo.DataAccess\obj\Debug\net8.0\Demo.DataAccess.dll
+D:\github_repos\DemoMvcSolution\Demo.DataAccess\obj\Debug\net8.0\refint\Demo.DataAccess.dll
+D:\github_repos\DemoMvcSolution\Demo.DataAccess\obj\Debug\net8.0\Demo.DataAccess.pdb
+D:\github_repos\DemoMvcSolution\Demo.DataAccess\obj\Debug\net8.0\ref\Demo.DataAccess.dll
